@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,th{
+            box-sizing: border-box;
+            background-color:yellow;
+            border: 1px;
+        }
+        input{
+            border-radius: 10px;
+        }
+        button{
+        
+            /* color:brown; */
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td>Enter the value1</td>
+                <td><input id='value1' type="number"></td>
+            </tr>
+            <tr>
+                <td>Enter the value2</td>
+                <td><input id = 'value2' type="number"></td>
+            </tr>
+            <tr>
+                <td><button id="add" onclick="addition()">ADD</button></td>
+            </tr>
+            <tr>
+                <td >Result</td>
+                <td><p id="result" type="number"></p></td>
+            </tr>
+        </table>
+    </div>
+    <!-- <script src="Addition.js"></script> -->
+    <script>
+        let v1=document.getElementById("value1");
+        let v2=document.getElementById("value2");
+        
+        function addition(){
+            // console.log("value"+v1.value+v2.value);
+            val1=v1.value;
+            val2=v2.value;
+            const res=parseInt(val1)+parseInt(val2);
+            document.getElementById("result").innerHTML=res;
+        }
+    </script>
+</body>
+</html>
